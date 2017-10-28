@@ -32,6 +32,7 @@ public class Mainframe extends JFrame{
     private JPanel Jpge2= new JPanel(new GridLayout(1,2,3,3));
     private JButton Jbtno = new JButton("/");
     private JButton Jbtn1 = new JButton("Close");
+    private JButton Jbtnc1 = new JButton("Close");
     private JButton Jbtn2 = new JButton("General");
     private Random rnd = new Random(System.currentTimeMillis());
 
@@ -77,7 +78,7 @@ public class Mainframe extends JFrame{
         cp1.setLayout(new BorderLayout(5,5));
         cp1.add(Jpge1,BorderLayout.CENTER);
         cp1.add(Jpge2,BorderLayout.SOUTH);
-        Jpge2.add(Jbtn1);
+        Jpge2.add(Jbtnc1);
         Jpge2.add(Jbtn2);
 
         jif.setBounds(0,0,400,300);
@@ -89,9 +90,16 @@ Jbtn1.addActionListener(new AbstractAction() {
     public void actionPerformed(ActionEvent e) {
         Jp.removeAll();
         jif.dispose();
-        jif1.dispose();
+
     }
 });
+        Jbtnc1.addActionListener(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Jp.removeAll();
+                jif1.dispose();
+            }
+        });
 
 
          jmItemLoto.addActionListener(new AbstractAction() {
@@ -106,7 +114,7 @@ Jbtn1.addActionListener(new AbstractAction() {
         jmItemKey.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Jp.removeAll();
                 keyboard();
                 jdp.add(jif);
                 jif.setVisible(true);

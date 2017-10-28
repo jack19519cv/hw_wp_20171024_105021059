@@ -42,7 +42,7 @@ public class Loginframe extends JFrame{
         JbtnLogin.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(JtfID.getText().equals("")&&new String (JtfPW.getPassword()).equals("")){
+                if(JtfID.getText().equals("h304")&&new String (JtfPW.getPassword()).equals("23323456")){
                     Mainframe mainframe = new Mainframe();
 
 //                    Mainframe mainframe = new Mainframe(Loginframe.this);
